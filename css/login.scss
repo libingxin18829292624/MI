@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+body,div,p,span,table,tr,td,dd,dl,dt,input,form,h1,h2,h3,h4,h5,h6,figure,li,ul,ol,blockquote,textarea,fieldset,option,select,a,hr{
+	margin: 0;
+	padding: 0;
+}
+
+ul,ol,li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+//header
+
+.header{
+	width: 100%;
+	height: 100px;
+	img{
+		padding-left: 100px;
+	}
+}
+
+.main{
+	width: 100%;
+	position: relative;
+	height: 565px;
+	overflow: hidden;
+	background-position: top center;
+	.bg{
+		width: 100%;
+		height: 565px;
+		background-position: top center;
+		display: block;
+		position: absolute;
+		background-image: url(../img/cd392f87b6584283a5a1fd285418b654.jpg);
+	}
+	.login{
+		position: absolute;
+		left: 830px;
+		top: 30px;
+		width: 412px;
+		height: 525px;
+		padding: 10px 0;
+		box-sizing: border-box;
+		background-color: #fff;
+		.login-method{
+			font-size: 24px;
+			height: 90px;
+			line-height: 90px;
+			color: #e0e0e0;
+			cursor: pointer;
+			text-align: center;
+			span{
+				display: inline-block;
+				padding: 0 35px;
+			}
+			.login-acount{
+				color: #666;
+			}
+			.login-ma{
+				color: #666;
+			}
+			.checked{
+				color: #ff6700;
+			}
+		}
+		.login-div-acount{
+			position: absolute;
+			width: 100%;
+			padding: 0 30px;
+			box-sizing: border-box;
+			.login-form{
+				#user-name,#pass-word{
+					width: 348px;
+					height: 48px;
+					border: 1px solid #e0e0e0;
+					margin-bottom: 15px;
+					outline: 0;
+					font-size: 14px;
+					text-indent: 15px;
+					color: #9d9d9d;
+				}
+				#log-in{
+					font-size: 14px;
+					color: white;
+					height: 50px;
+					width: 348px;
+					background-color: #ff6700;
+					margin-top: 10px;
+					border: none;
+					cursor: pointer;
+				}
+			}
+			.login-func{
+				margin-bottom: 140px;
+				margin-top: 10px;
+				.log-reg-href{
+					font-size: 14px;
+					color: #ff6700;
+					float: left;
+				}
+				span{
+					color: #999;
+					float: right;
+					a{
+						font-size: 14px;
+						color: #999;
+					}
+				}
+			}
+			p:nth-last-child(2){
+				font-size: 14px;
+				color: #bbb;
+				vertical-align: middle;
+				&:before{
+					content: "";
+					width: 120px;
+					height: 1px;
+					background-color: #bbb;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				&:after{
+					content: "";
+					width: 120px;
+					height: 1px;
+					background-color: #bbb;
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+			.other-way{
+				margin-top: 20px;
+				text-align: center;
+				i{
+					margin: 0 20px;
+  					color: #333;
+  					&:hover{
+  						color: #ff6700;
+  					}
+				}
+			}
+		}
+		.login-div-ma{
+			box-sizing:border-box;
+			text-align: center;
+			display: none;
+			position: absolute;
+			top: 90px;
+			width: 100%;
+			padding: 70px 30px 0;
+			p{
+				text-align: center;
+				font-size: 14px;
+				margin-top: 10px;
+				span{
+					color: #ff6700;
+				}
+			}
+		}
+	}
+	
+}
+
+
+// footer
+.footer{
+	padding-top: 95px;
+	width: 100%;
+	.some-func{
+		color: #757575;
+		font-size: 14px;
+		text-align: center;
+		a{
+			font-size: 14px;
+			color: #757575;
+			padding: 0 10px;
+		}
+		.focus-func{
+			color: #333;
+		}
+	}
+	.copyright{
+		vertical-align: middle;
+		font-size: 14px;
+		color: #757575;
+		text-align: center;
+		padding: 10px 0 30px;
+	}
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/MIfont/iconfont.eot');
+  src: url('../font/MIfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/MIfont/iconfont.woff') format('woff'),
+  url('../font/MIfont/iconfont.ttf') format('truetype'),
+  url('../font/MIfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:26px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body,div,p,span,table,tr,td,dd,dl,dt,input,form,figure,li,ul,ol,blockquote,textarea,fieldset,option,select,a,hr{
+body,div,p,span,table,tr,td,dd,dl,dt,input,form,h1,h2,h3,h4,h5,h6,figure,li,ul,ol,blockquote,textarea,fieldset,option,select,a,hr{
 	margin: 0;
 	padding: 0;
 }
@@ -12,6 +12,7 @@ ul,ol,li{
 a{
 	text-decoration: none;
 }
+
 
 //shopping小图标
 @font-face {
@@ -31,8 +32,6 @@ a{
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 // header_ad
 .header-ad{
 	width: 100%;
@@ -43,6 +42,7 @@ a{
 		height: 120px;
 	}
 }
+
 
 // header
 .header{
@@ -130,17 +130,11 @@ a{
 		line-height: 50px;
 		margin-top: 30px;
 		float: right;
-		&:hover #search-input{
-			border:1px solid #b0b0b0;
-		}
-		&:hover #search-btn{
-			border:1px solid #b0b0b0;
-			border-left: 0;
-		}
+		position: relative;
 		.command-a{
-			position: absolute;    
-			top: 29px;
+			position: absolute;
     		right: 65px;
+    		transition: all .3s;
 			a{
 				font-size: 12px;
 				color: #757575;
@@ -177,12 +171,44 @@ a{
 			padding-left: 11px;
 			box-sizing: border-box;
 			transition: all .2s;
+			cursor: pointer;
+			&:hover{
+				background-color: #ff6700;
+				color: #fff;
+			}
+		}
+		.search-good-list{
+			width: 222px;
+			position: absolute;
+			left: 0;
+			top: 50px;
+			padding: 0 15px;
+			z-index: 1000;
+			display: none;
+			border: 1px solid #ff6700;
+			box-sizing: border-box;
+			background-color: white;
+			li{
+				font-size: 12px;
+				color: #424242;
+				height: 30px;
+				.search-good-name{
+					float: left;
+					height: 30px;
+					line-height: 30px;
+				}
+				.has-count{
+					color: #b0b0b0;
+					float: right;
+					height: 30px;
+					line-height: 30px;
+				}
+			}
 		}
 	}
 	.nav-goods{
 		width: 1226px;
 		height: 0px;
-		border-top: 1px solid #e0e0e0;
 		z-index: 10000;
 		float: left;
 		position: absolute;
@@ -192,6 +218,7 @@ a{
 		background-color: white;
 		.nav-goods-list{
 			overflow: hidden;
+			border-top: 1px solid #e0e0e0;
 			width: 100%;
 			float: left;
 			height: 230px;
@@ -234,6 +261,7 @@ a{
 	}
 }
 
+
 // banner
 #banner{
 	width: 1226px;
@@ -272,33 +300,27 @@ a{
 		left: 234px;
 		top: 0;
 		background-color: white;
-		width: 500px;
 		height: 460px;
 		border: 1px solid #e0e0e0;
 		display: none;
-		li{
-			
+		z-index: 10000;
+		overflow: hidden;
+		box-sizing: border-box;
+		li:hover span{
+			color: #ff6700;
 		}
 	}
 	.up{
-		width: 42px;
-		height: 68px;
-		position: absolute;
-		left: 234px;
-		top: 195px;
-		z-index: 100;
-		line-height: 68px;
-		text-align: center;
+		&:hover{
+			background-color: rgba(0,0,0,.6);
+			color: white;
+		}
 	}
 	.down{
-		width: 42px;
-		height: 68px;
-		position: absolute;
-		right: 0;
-		top: 195px;
-		z-index: 100;
-		line-height: 68px;
-		text-align: center;
+		&:hover{
+			background-color: rgba(0,0,0,.6);
+			color: white;
+		}
 	}
 } 
 
@@ -310,10 +332,14 @@ a{
 	margin: 0 auto;
 	margin-top: 15px;
 	margin-bottom: 26px;
-	img{
+	a{
+		display: block;
 		float: left;
+		display: block;
 		margin-left: 14px;
-		cursor: pointer;
+		img{
+			cursor: pointer;
+		}
 		&:first-child{
 			margin-left: 0;
 		}
@@ -325,8 +351,12 @@ a{
 	margin: 0 auto;
 	padding-bottom: 42px;
 	overflow: hidden;
+	h2{
+		font-weight: 500;
+	}
 	.command-head{
 		overflow: hidden;
+		
 		h2{
 			font-weight: 500;
 			float: left;
@@ -334,6 +364,7 @@ a{
 		.go-left-right{
 			float: right;
 			margin-top: 30px;
+			cursor: pointer;
 			.toleft{
 				display: inline-block;
 				width: 35px;
@@ -522,7 +553,14 @@ a{
 					a{
 						color: #333;
 						transition: all .4s;
+						i{
+							color: #b0b0b0;
+							transition: all .4s;
+						}
 						&:hover{
+							color: #ff6700;
+						}
+						&:hover i{
 							color: #ff6700;
 						}
 					}
@@ -817,12 +855,35 @@ a{
 	width: 25px;
 	height: 120px;
 	position: fixed;
-	right: 20px;
+	right: 25px;
 	font-size: 12px;
 	bottom: 100px;
+	z-index: 1000;
+	cursor: pointer;
 	i{
+		width: 20px;
+		height: 20px;
+		display: block;
+		color: #b2b2b2;
+		&:hover{
+			color: #ff6700;
+		}
 		position: relative;
 		display: inline-block;
+		.global-tip{
+			width: 60px;
+			height: 26px;
+			position: absolute;
+			left: -60px;
+			top: 0;
+			background-color: white;
+			font-size: 12px;
+			line-height: 26px;
+			text-align: center;
+			display: none;
+			border: 1px solid #e0e0e0;
+			margin-right: 10px;
+		}
 		&:hover .global-tip{
 			display: block;
 			color: #ff6700;

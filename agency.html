@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>agency</title>
+</head>
+<body>
+	<ul id="all-goods-1">
+	</ul>
+</body>
+</html>
+<script>
+	let $allGOods1 = document.getElementById("all-goods-1");
+	$allGOods1.style.zIndex = 10000;
+	$allGOods1.style.width = 795 + "px";
+	let goods = [{
+					"url":"img/QQ截图20180611165452.png",
+					"alt":"小米6"
+				},
+				{
+					"url":"img/QQ截图20180611165511.png",
+					"alt":"小米8"
+				},
+				{
+					"url":"img/QQ截图20180611165547.png",
+					"alt":"小米6C"
+				},
+				{
+					"url":"img/QQ截图20180611165603.png",
+					"alt":"小米8 SE"
+				},
+				{
+					"url":"img/QQ截图20180611165618.png",
+					"alt":"红米 Note5"
+				},
+				{
+					"url":"img/QQ截图20180611165730.png",
+					"alt":"黑鲨游戏手机"
+				},
+				{
+					"url":"img/QQ截图20180611165634.png",
+					"alt":"移动4G专区"
+				},
+				{
+					"url":"img/QQ截图20180611165715.png",
+					"alt":"米粉卡 日租卡"
+				},
+				{
+					"url":"img/QQ截图20180611165654.png",
+					"alt":"小米 Mix2"
+				},
+				{
+					"url":"img/QQ截图20180611165452.png",
+					"alt":"红米5A"
+				},
+				{
+					"url":"img/QQ截图20180611165511.png",
+					"alt":"手机上门维修"
+				},
+				{
+					"url":"img/QQ截图20180611165547.png",
+					"alt":"红米S2"
+				},
+				{
+					"url":"img/QQ截图20180611165603.png",
+					"alt":"小米 Max2"
+				},
+				{
+					"url":"img/QQ截图20180611165618.png",
+					"alt":"红米5 plus"
+				},
+				{
+					"url":"img/QQ截图20180611165730.png",
+					"alt":"红米5"
+				},
+				{
+					"url":"img/QQ截图20180611165634.png",
+					"alt":"小米移动电话卡"
+				},
+				{
+					"url":"img/QQ截图20180611165715.png",
+					"alt":"小米 Note2"
+				},
+				{
+					"url":"img/QQ截图20180611165654.png",
+					"alt":"小米Mix 2s"
+				}
+	];
+	for(let i = 0; i < goods.length; i++){
+		let liDom = document.createElement("li");
+		liDom.style.cssText = "display:inline-block;line-height:77px;padding-left:15px;box-sizing:border-box";
+		liDom.style.width = 265 + "px";
+		liDom.style.height = 77 + "px";
+		let imgDom = document.createElement("img");
+		imgDom.src = goods[i].url;
+		imgDom.style.verticalAlign = "middle";
+		// imgDom.style.float = "left";
+		// imgDom.style.display = "block";
+		let imgAlt = document.createElement("span");
+		imgAlt.innerHTML = goods[i].alt;
+		imgAlt.style.verticalAlign = "middle";
+		imgAlt.style.fontSize = "14px";
+		liDom.appendChild(imgDom);
+		liDom.appendChild(imgAlt);
+		$allGOods1.appendChild(liDom);
+	}
+	let aTag = document.createElement("a");
+	aTag.href = "#";
+	let $lis = $("#all-goods-1 li");
+	$lis.wrap(aTag);
+	$lis.css("color","#333");
+	$("li img").css("margin-right","10px");
+</script>
