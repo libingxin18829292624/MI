@@ -4,38 +4,41 @@
 	<meta charset="UTF-8">
 	<title>reg</title>
 	<link rel="stylesheet" type="text/css" href="css/reg.css">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 	<div class="main">
 		<img class="logo" src="img/logo.png" alt="">
 		<h1 class="title">注册小米帐号</h1>
-		<form action="#" class="reg">
-			<p class="area">国家/地区</p>
-			<select name="" id="area">
-				<option value="中国" selected>中国</option>
-			</select>
-			<p class="tip">成功注册帐号后，国家/地区将不能被修改</p>
-			<p class="phone">手机号码</p>
-			<select name="" id="phone">
-				<option value="中国">+86</option>
-			</select>
-			<input type="text" id="phone-number" placeholder="请输入电话号码">
-			<br>
+		<form action="#" class="reg-box">
+			<p>帐号：</p>
+			<input name="" type="text" id="username" spellcheck="false">
+			<p class="tip">格式：字母开头,长度6-16之间,只能含字母、数字和下划线</p>
+			<p>密码：</p>
+			<input name="" type="password" id="password" spellcheck="false">
+			<p class="tip">格式：长度6-16位,不能含空格,不能只含数字</p>
+			<p>验证码：</p>
+			<input type="text" id="check-ma" placeholder="请输入验证码" spellcheck="false">
+			<img class="check-img" src="img/QQ截图20180613140856.png" alt="验证码">
 			<p class="error">
-				<i class="iconfont">&#xe633;</i> 请输入手机号码
 			</p>
-			<input type="submit" value="立即注册" id="reg">
-			<p class="agree"><i class="iconfont selected">&#xe640;</i> 注册帐号即表示您同意并愿意遵守小米 <a href="#">用户协议</a>和 <br><a href="#">隐私政策</a></p>
+			<input type="submit" value="立即注册" id="reg" class="reg" spellcheck="false">
+			<p class="agree"><i class="iconfont selected">&#xe640;</i> 注册帐号即表示您同意并愿意遵守小米 <a href="#">用户协议</a> 和 <a href="#">隐私政策</a></p>
 
 		</form>
 	</div>
 	
 	<!-- footer -->
-	<div class="footer-self">
+	<div class="footer">
+		<p class="some-func">
+			<a href="#" class="focus-func">简体</a>|
+			<a href="#">繁体</a>|
+			<a href="#">English</a>|
+			<a href="#">常见问题</a>|
+			<a href="#">隐私政策</a>
+		</p>
+		<p class="copyright">小米公司版权所有-京ICP备10046444-<img src="img/ghs.png" alt="">京公网安备11010802020134号-京ICP证110507号</p>
 	</div>
 </body>
 </html>
 <script type="text/javascript" src="src_js/jquery.min.js"></script>
 <script type="text/javascript" src="js/reg.js"></script>
-<script type="text/javascript" src="js/login.js"></script>

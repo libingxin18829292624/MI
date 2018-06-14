@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,p,span,table,tr,td,dd,dl,dt,input,form,h1,h2,h3,h4,h5,h6,figure,li,ul,ol,blockquote,textarea,fieldset,option,select,a,hr{
+			margin: 0;
+			padding: 0;
+		}
+
+		ul,ol,li{
+			list-style: none;
+		}
+
+		body{
+			width: 100%;
+			height: 100%;
+			background-color: #f7f7f7;
+			font-size: 14px;
+		}
+		img{
+			margin-bottom: 20px;
+		}
+		div{
+			width: 100%;
+			text-align: center;
+			padding-top: 100px;
+		}
+		.goindex{
+			font-size: 16px;
+			color: #ff6700;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/QQ截图20180613194147.png" alt="">
+		<br>
+		<span>注册成功！</span>
+		<br>
+		<span> <a id="sec">3</a> 秒后为您登录跳转......</span>
+		<br>
+		<a href="index.html" class="goindex">直接跳转</a>
+	</div>
+</body>
+</html>
+<script>
+	let sec = 3;
+	let secDom = document.getElementById("sec");
+	let myTimer = setInterval(function(){
+		sec--;
+		if(sec == 0){
+			sec = 0;
+			clearInterval(myTimer);
+			window.location.href = "index.html";
+		}
+		secDom.innerHTML = sec;
+	},1000);
+</script>

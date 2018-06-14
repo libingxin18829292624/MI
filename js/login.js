@@ -24,4 +24,29 @@ $(function(){
 		$(".login-div-ma").css("display","block");
 	});
 
+	$("#user-name");
+	$("#pass-word");
+
+	let usernameCheck = false;
+	let passwordCheck = false;
+
+	$("#log-in").click(function(){
+		if($("#user-name").val() == "" || $("#pass-word").val() == ""){
+			$(".error").html("帐号密码不能为空！");
+		}else{
+			$.post("user.php",{
+				"username":$("#user-name").val(),
+				"password":$("#pass-word").val(),
+				"type":2
+			},function(data){
+				if(data == 1){
+					location.href = "index.html";
+				}else{
+					$(".error").html("帐号密码不正确！");
+				}
+			});
+		}
+	})
+
+
 });

@@ -71,6 +71,11 @@ a{
 		.info{
 			float: right;
 			margin-right: 20px;
+			ul{
+				li{
+					
+				}
+			}
 		}
 		.shopping{
 			width: 120px;
@@ -353,13 +358,18 @@ a{
 	overflow: hidden;
 	h2{
 		font-weight: 500;
+		padding-bottom: 15px;
 	}
 	.command-head{
 		overflow: hidden;
+		height: 45px;
+		line-height: 45px;
+		margin-bottom: 20px;
 		
 		h2{
 			font-weight: 500;
 			float: left;
+			padding-bottom: 15px;
 		}
 		.go-left-right{
 			float: right;
@@ -544,6 +554,9 @@ a{
 				height: 72px;
 				h2{
 					width: 100px;
+					height: 45px;
+					line-height: 45px;
+					margin-top: 10px;
 					float: left;
 					font-weight: 400;
 				}

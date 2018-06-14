@@ -4,16 +4,15 @@
 	<title>小米商城</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="src_css/jquery-ui.min.css">
 </head>
 <body>
 	<!-- header_ad -->
 	<div class="header-ad">
-			<a href="#"><img src="img/header_ad.jpg" alt=""></a>
+		<a href="#"><img src="img/header_ad.jpg" alt=""></a>
 	</div>
  
 	<!-- header -->
-	<div class="header">
+	<div class="header" id="public-header">
 		<div class="header-content">
 			<ul>
 				<li><a href="#">小米商城</a></li>
@@ -30,15 +29,16 @@
 			</div>
 			<div class="info">
 				<ul>
-					<li><a href="#">登录</a></li>
-					<li><a href="#">注册</a></li>
+					<li><a href="login.html">登录</a></li>
+					<li><a href="login.html">登录</a></li>
+					<li><a href="reg.html">注册</a></li>
 					<li><a href="#" class="last-a">消息通知</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- nav -->
-	<div class="nav">
+	<div class="nav" id="public-nav">
 		<div class="logo">
 			<img src="img/logo.png" alt="">
 		</div>
@@ -57,11 +57,23 @@
 		<form class="search" method="get" action="#">
 			<input type="text" id="search-input">
 			<div type="button" id="search-btn">
-				<i class="iconfont">&#xe610;</i>
+				<i class="iconfont-search">&#xe610;</i>
 			</div>
 			<div class="command-a">
 				<a href="#">小米8</a>
 				<a href="#">618主会场</a>
+			</div>
+			<div class="search-good-list">
+				<li><span class="search-good-name">小米6X</span><span class="has-count">约有6件</span></li>
+				<li><span class="search-good-name">小米Mix 2S</span><span class="has-count">约有5件</span></li>
+				<li><span class="search-good-name">黑鲨游戏手机</span><span class="has-count">约有3件</span></li>
+				<li><span class="search-good-name">红米Note 5</span><span class="has-count">约有6件</span></li>
+				<li><span class="search-good-name">红米5A</span><span class="has-count">约有13件</span></li>
+				<li><span class="search-good-name">小米电视4C</span><span class="has-count">约有5件</span></li>
+				<li><span class="search-good-name">电视32英寸</span><span class="has-count">约有3件</span></li>
+				<li><span class="search-good-name">笔记本Pro</span><span class="has-count">约有5件</span></li>
+				<li><span class="search-good-name">空气净化器</span><span class="has-count">约有11件</span></li>
+				<li><span class="search-good-name">净水器</span><span class="has-count">约有8件</span></li>
 			</div>
 		</form>
 		<div class="nav-goods">
@@ -122,7 +134,6 @@
 			</ul>
 		</div>
 	</div>
-
 	<!-- banner -->
 	<div id="banner">
 		<ul class="all-goods-list">
@@ -140,8 +151,8 @@
 		<ul class="all-goods">
 			
 		</ul>
-		<div class="up"><i class="iconfont">&#xe729;</i></div>
-		<div class="down"><i class="iconfont">&#xe62e;</i></div>
+		<!-- <div class="up"><i class="iconfont-up-down">&#xe729;</i></div>
+		<div class="down"><i class="iconfont-up-down">&#xe62e;</i></div> -->
 	</div>
 
 	<!-- body -->
@@ -155,10 +166,6 @@
 	<div class="command">
 		<div class="command-head">
 			<h2>小米闪购</h2>
-			<div class="go-left-right">
-				<i class="toleft" class="iconfont">&#xe729;</i>
-				<i class="toleft" class="iconfont">&#xe62e;</i>
-			</div>
 		</div>
 		<div class="action">
 			<div class="timer">
@@ -183,7 +190,7 @@
 		<a href="#"><img class="command-good" src="img/QQ截图20180608155334.png" alt=""></a>
 	</div>
 
-	<a href="#"><img class="img-single" src="img/QQ截图20180608160253.png" alt=""></a>
+	<a href="#" class="img-single"><img src="img/QQ截图20180608160253.png" alt=""></a>
 
 	<div class="main">
 		<div class="goods">
@@ -191,7 +198,7 @@
 				<div class="goods-header">
 					<h2>手机</h2>
 					<div class="other-list">
-						<a href="#">查看全部<i class="iconfont">&#xe600;</i></a>
+						<a href="#">查看全部 <i class="iconfont">&#xe600;</i></a>
 					</div>
 				</div>
 				<div class="goods-box">
@@ -317,7 +324,7 @@
 			</div>
 		</div>
 		
-		<a href="#"><img class="img-single" src="img/QQ截图20180608165950.png" alt=""></a>
+		<a href="#" class="img-single"><img src="img/QQ截图20180608165950.png" alt=""></a>
 
 		<div class="goods">
 			<div class="goods-content">
@@ -454,14 +461,14 @@
 			</div>
 		</div>
 
-		<a href="#"><img class="img-single" src="img/QQ截图20180608202637.png" alt=""></a>
+		<a href="#" class="img-single"><img src="img/QQ截图20180608202637.png" alt=""></a>
 
 		<div class="command">
 			<div class="command-head">
 				<h2>为你推荐</h2>
-				<div>
-					<a href="" class="toleft"></a>
-					<a href="" class="toright"></a>
+				<div class="go-left-right">
+					<a class="toleft"><i class="iconfont">&#xe729;</i></a>
+					<a class="toright"><i class="iconfont">&#xe62e;</i></a>
 				</div>
 			</div>
 			<div class="command-good diff-command first-command">
@@ -621,24 +628,24 @@
 	
 	<!--全局功能标签-->
 	<div class="global">
-		<i class="iconfont">&#xe654;
+		<i class="iconfont-global">&#xe654;
 			<a class="global-tip" href="#">个人中心</a>
 		</i>
-		<i class="iconfont">&#xe601;
+		<i class="iconfont-global">&#xe601;
 			<a class="global-tip" href="#">联系客服</a>
 		</i>
-		<i class="iconfont">&#xe603;
+		<i class="iconfont-global">&#xe603;
 			<a class="global-tip" href="#">购物车(0)</a>
 		</i>
-		<i class="iconfont go-to-top">&#xe88d;
-			<a class="global-tip" href="#">回到顶部</a>
-		</i>
+		<a href="#">
+			<i class="iconfont-global go-to-top">&#xe88d;
+				<a class="global-tip" href="#">回到顶部</a>
+			</i>
+		</a>
 		
 	</div>
 
 </body>
 </html>
-<script type="text/javascript" src="src_js/sea.js"></script>
 <script type="text/javascript" src="src_js/jquery.min.js"></script>
-<script type="text/javascript" src="src_js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

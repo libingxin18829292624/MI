@@ -14,14 +14,6 @@ a{
 }
 
 
-select::-ms-expand{display:none;}
-select{
-  appearance:none;
- -moz-appearance:none;
- -webkit-appearance:none;
-}
-
-
 // main
 .main{
 	width: 100%;
@@ -35,7 +27,7 @@ select{
 		font-size: 30px;
 		margin-bottom: 20px;
 	}
-	.reg{
+	.reg-box{
 		width: 334px;
 		margin: 0 auto;
 		text-align: left;
@@ -43,69 +35,53 @@ select{
 		position: relative;
 		p{
 			font-size: 14px;
+			color: #333;
+			line-height: 24px;
 		}
-		#area{
+		.tip{
+			font-size: 12px;
+			line-height: 24px;
+			color: #b0b0b0;
+			text-indent: 18px;
+		}
+		#username,#password,#check-ma{
 			width: 334px;
 			height: 42px;
 			border: 1px solid #e8e8e8;
-			margin: 5px 0;
 			outline: 0;
 			box-sizing:border-box;
-			cursor: pointer;
-			background: url(../img/QQ截图20180612131919.png) no-repeat;
-			background-position: 302px 11px;
 			padding-left: 15px;
 			line-height: 42px;
 		}
-		.area{
-			color: #333;
+
+		.red-border{
+			border: 1px solid red!important;
 		}
-		.tip{
-			color: #666;
+		#check-ma{
+			width: 200px;
+			vertical-align: middle;
 		}
-		.phone{
-			margin-top: 20px;
-			color: #333;
-		}
-		#phone{
-			width: 75px;
+		.check-img{
+			vertical-align: middle;
+			width: 128px;
 			height: 42px;
-			line-height: 42px;
-			border: 1px solid #e8e8e8;
-			margin: 5px 0;
-			float: left;
-			border-right: 0;
-			outline: 0;
-			box-sizing:border-box;
-			cursor: pointer;
-			background: url(../img/QQ截图20180612132851.png) no-repeat;
-			background-position: 40px 11px;
-			text-indent: 10px;
-		}
-		#phone-number{
-			width: 258px;
-			height: 42px;
-			line-height: 42px;
-			border: 1px solid #e8e8e8;
-			float: left;
-			margin-top: 5px;
-			box-sizing: border-box;
-			outline: 0;
-			text-indent: 10px;
 		}
 		.error{
 			float: left;
 			width: 100%;
-			line-height: 40px;
+			line-height: 38px;
+			height: 38px;
 			color: #ff6666;
 			user-select:none;
+			box-sizing:border-box;
 			i{
 				font-size: 16px;
 				cursor: default;
 				user-select:none;
 			}
 		}
-		#reg{
+		
+		.reg{
 			float: left;
 			width: 332px;
 			height: 42px;
@@ -117,13 +93,14 @@ select{
 			outline: none;
 			cursor: pointer;
 			&:hover{
-				opacity: 0.6;
+				opacity: 0.9;
 			}
 		}
 		.agree{
 			float: left;
 			margin-top: 30px;
 			color: #9d9d9d;
+			user-select: none;
 			i{
 				font-size: 16px;
 				cursor: pointer;
@@ -139,8 +116,32 @@ select{
 	}
 }
 
-.footer-self{
-	margin-top: -100px;
+
+
+// footer
+.footer{
+	padding-top: 35px;
+	width: 100%;
+	.some-func{
+		color: #757575;
+		font-size: 14px;
+		text-align: center;
+		a{
+			font-size: 14px;
+			color: #757575;
+			padding: 0 10px;
+		}
+		.focus-func{
+			color: #333;
+		}
+	}
+	.copyright{
+		vertical-align: middle;
+		font-size: 14px;
+		color: #757575;
+		text-align: center;
+		padding: 10px 0;
+	}
 }
 
 @font-face {
